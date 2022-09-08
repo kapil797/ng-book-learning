@@ -1,44 +1,21 @@
-<!-- <div class="col-12">
-    <div class="">
-        <div class="value">
-            {{ votes }}
-        </div>
-        <div class="label">
-            Points
-        </div>
-    </div>
-</div>
-<div class="twelve wide column">
-    <a class="ui large header" href="{{ link }}">
-        Writing Your First Angular Web Application 48
-        {{ title }}
-    </a>
-    <ul class="ui big horizontal list voters">
-        <li class="item">
-            <a href (click)="voteUp()">
-                <i class="arrow up icon"></i>
-                upvote
-            </a>
-        </li>
-        <li class="item">
-            <a href (click)="voteDown()">
-                <i class="arrow down icon"></i>
-                downvote
-            </a>
-        </li>
-    </ul>
-</div> -->
 <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-        <div class="col-md-4 text-center">
-            <h4>{{votes}}</h4>
-            <h5>Points</h5>
+    <div class="row">
+        <div class="col-md-4 text-div">
+            <div class="row">
+                <h4>{{article.votes}}</h4>
+            </div>
+            <div class="row">
+                <h5>Points</h5>
+            </div>
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">{{title}}</h5>
-                <button type="button" class="btn btn-link"><i class="fa fa-regular fa-arrow-up"></i>Upvote</button>
-                <button type="button" class="btn btn-link"><i class="fa fa-regular fa-arrow-down"></i>Downvote</button>
+                <h5 class="card-title"><a href="{{article.link}}">{{article.title}}</a></h5>
+                <div class="meta"> {{article.domain()}}</div>
+                <button type="button" class="btn btn-link" (click)="voteUp()"><i
+                        class="fa fa-regular fa-arrow-up"></i>Upvote</button>
+                <button type="button" class="btn btn-link" (click)="voteDown()"><i
+                        class="fa fa-regular fa-arrow-down"></i>Downvote</button>
             </div>
         </div>
     </div>
