@@ -1,0 +1,19 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <app-product-image [product]="product"></app-product-image>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">SKU # {{product.sku}}</p>
+                <p class="card-text">
+                    <app-product-department [product]="product"></app-product-department>
+                </p>
+                <p class="card-text">
+                    <app-price-display [productPrice]="product.price"></app-price-display>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
