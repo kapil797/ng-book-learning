@@ -11,13 +11,12 @@ export class AppComponent {
   articles: Article[];
   products: Product[];
 
-
   constructor() {
     this.products = [
       new Product(
         "SHOES",
         "Black Running Shoes",
-        "/assets/images/shoe.jpg",
+        "/assets/images/shoe.webp",
         ["Men", "Shoes", "Running Shoes"],
         129.99
       ),
@@ -31,7 +30,7 @@ export class AppComponent {
       new Product(
         "NICEHAT",
         "A nice BlacK hat",
-        "/assets/images/bag.webp",
+        "/assets/images/bag.jpg",
         ["Men", "Accessories", "Hats"],
         29.99
       ),

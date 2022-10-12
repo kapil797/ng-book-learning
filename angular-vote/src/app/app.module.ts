@@ -12,6 +12,9 @@ import { ProductRowComponent } from './product-row/product-row.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DemoFormSkuComponent } from './demo-form-sku/demo-form-sku.component';
+import { DemoFormSkuWithBuilderComponent } from './demo-form-sku-with-builder/demo-form-sku-with-builder.component';
 
 
 @NgModule({
@@ -25,9 +28,13 @@ import { PriceDisplayComponent } from './price-display/price-display.component';
     ProductRowComponent,
     ProductImageComponent,
     ProductDepartmentComponent,
-    PriceDisplayComponent
+    PriceDisplayComponent,
+    DemoFormSkuComponent,
+    DemoFormSkuWithBuilderComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule
   ],

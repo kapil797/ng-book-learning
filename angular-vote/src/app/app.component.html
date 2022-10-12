@@ -2,10 +2,15 @@
 <html lang="en">
 
 <body>
+  <div class="row m-3">
+    <div class="form-demo-sku">
+      <app-demo-form-sku-with-builder></app-demo-form-sku-with-builder>
+      <!-- <app-demo-form-sku></app-demo-form-sku> -->
+    </div>
+  </div>
   <div class="row m-3" style="min-height: 500px;background:grey">
     <div class="inventory-app">
       <app-product-list [productList]="products" (onProductSelected)="productWasSelected($event)">
-
       </app-product-list>
     </div>
   </div>

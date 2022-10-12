@@ -1,0 +1,9 @@
+<div class="row">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" [class.error]="!myForm.valid && myForm.touched">
+        <label for="skuInput" class="form-label">SKU</label>
+        <input type="text" id="skuInput" placeholder="SKU" [formControl]="sku">
+        <div *ngIf="sku.hasError('invalidSku') && sku.touched" class="ui error message">SKU must begin with
+            <span>123</span></div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
